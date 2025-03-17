@@ -5,7 +5,8 @@ DPAL is an annotated library of peer-reviewed research that aims to:  (1) Fill a
 ## Installation
 
 Zotero [installation instructions](https://www.zotero.org/support/installation) are available on the Zotero website
-Download CSV file 
+- Group: https://www.zotero.org/groups/5312158/dynamic_polymer_annotated_library_dpal/library
+- RIS: download and [import](https://www.zotero.org/support/kb/importing_standardized_formats)
 
 <!--Juptyer Notebook install info-->
 
