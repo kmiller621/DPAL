@@ -1,0 +1,47 @@
+// Script to add tags to new papers based on keywords—using Zotero Action/Tags plugin
+// Auto-tag when keyword list detected in title and abstract 
+// @author windingwind, BoBo-YunYun, thy960112 
+// @link https://github.com/windingwind/zotero-actions-tags/discussions/119 
+// @usage Replace the `KEYWORD_GROUPS` 
+
+// Configuration: Keywords and corresponding tags 
+// Add more keyword-tag groups as needed 
+
+const KEYWORD_GROUPS = [
+    {
+        keywords: ["adenine"],
+        tags: ["#Bond: Adenine"]
+    }
+];
+
+
+if (!item) {
+    return "[Conditional Tag] item is empty";
+}
+
+const title = item.getField("title").toLowerCase();
+const abstract = item.getField("abstractNote").toLowerCase();
+let tagsAdded = [];
+
+// Process each keyword group
+for (const group of KEYWORD_GROUPS) {
+    // Check if any keyword from the group is found in title or abstract
+    if (group.keywords.some(kwd => 
+        title.includes(kwd.toLowerCase()) || 
+        (abstract && abstract.includes(kwd.toLowerCase()))
+    )) {
+        // Add all corresponding tags for this keyword group
+        group.tags.forEach(tag => {
+            item.addTag(tag, 1);
+            tagsAdded.push(tag);
+        });
+    }
+}
+
+// Generate return message
+if (tagsAdded.length > 0) {
+    const uniqueTags = [...new Set(tagsAdded)]; // Remove duplicate tags in message
+    return `[Conditional Tag] item "${item.getField("title")}" has been tagged with: ${uniqueTags.join(", ")}`;
+} else {
+    return `[Conditional Tag] item "${item.getField("title")}" does not match any configured keywords`;
+}
