@@ -15,8 +15,10 @@ universal to materials design questions.
   Kathryn Miller
     kathryn.miller@nist.gov
 ### Usage
-RIS File--Download and import into reference manager application (e.g.,
-Zotero), Tags in KW fields; CSV File--Available columns: Item Type, Publication
+See latest [release](https://github.com/kmiller621/DPAL/releases)
+* RIS File--Download and import into reference manager application (e.g.,
+Zotero), Tags in KW fields
+* CSV File--Available columns: Item Type, Publication
 Year, Author, Title, Publication Title, DOI, Url, Abstract Note, Date, Series
 [2023 JIF], Extra, Notes, Manual Tags, Tags are separated by semicolon (;)
 
