@@ -76,4 +76,4 @@ Zotero installation instructions are available on the Zotero website
 * CSV file in analysis program
 	* Available columns: Item Type, Publication Year, Author, Title, Publication Title, DOI, Url, Abstract Note, Date, Series [2023 JIF], Extra, Notes, Manual Tags
 	* Tags are separated by semicolon (;)
- 	* Sample jupyter notebook available
+ 	* Sample jupyter notebook available: https://github.com/kmiller621/DPAL/blob/main/Tag%20Analysis-v2-MIDAS.ipynb 
